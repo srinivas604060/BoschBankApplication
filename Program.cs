@@ -91,16 +91,46 @@ namespace BankApplication
                 else if (type == 2)
                 {
                     typeofaccount = "Current Account";
-                    Console.WriteLine("Enter the Money You want to Deposit");
-                    Amount = Convert.ToDouble(Console.ReadLine());
-                    DepositAmount();
+                    Console.WriteLine("                      ");
+                    Console.WriteLine("======================");
+                    Console.WriteLine("                      ");
+                    Console.WriteLine(@"true-Deposit                                                                       false-Withdraw");
+                    bool select = Convert.ToBoolean(Console.ReadLine());
+                    if (select == true)
+                    {
+                        Console.WriteLine("Enter the Money You want to Deposit");
+                        Amount = Convert.ToDouble(Console.ReadLine());
+                        DepositAmount();
+                    }
+                    else if (select == false)
+                    {
+                        Console.WriteLine("Enter the Money You want to Withdraw");
+                        Amount = Convert.ToDouble(Console.ReadLine());
+                        WithdrawAmount();
+
+                    }
                 }
                 else if (type == 3)
                 {
                     typeofaccount = "ChildCare Account";
-                    Console.WriteLine("Enter the Money You want to Deposit");
-                    Amount = Convert.ToDouble(Console.ReadLine());
-                    DepositAmount();
+                    Console.WriteLine("                      ");
+                    Console.WriteLine("======================");
+                    Console.WriteLine("                      ");
+                    Console.WriteLine(@"true-Deposit                                                                       false-Withdraw");
+                    bool select = Convert.ToBoolean(Console.ReadLine());
+                    if (select == true)
+                    {
+                        Console.WriteLine("Enter the Money You want to Deposit");
+                        Amount = Convert.ToDouble(Console.ReadLine());
+                        DepositAmount();
+                    }
+                    else if (select == false)
+                    {
+                        Console.WriteLine("Enter the Money You want to Withdraw");
+                        Amount = Convert.ToDouble(Console.ReadLine());
+                        WithdrawAmount();
+
+                    }
                 }
                 
 
@@ -118,6 +148,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets deposited");
                             initialBalance += Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -132,13 +163,10 @@ namespace BankApplication
                                         Console.WriteLine($"The Penalty of rupees 500 charged from your account, Now your balance is {initialBalance - 500}");
                                         initialBalance = initialBalance - 500;
                                     }
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
-                                    Console.WriteLine("Enter the Money You want to Deposit");
-                                    Amount = Convert.ToDouble(Console.ReadLine());
-                                    DepositAmount();
+                                    AccountType();
                                     break;
                             }
 
@@ -179,7 +207,7 @@ namespace BankApplication
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
-                                    DepositAmount();
+                                    AccountType();
                                     break;
                             }
                         }
@@ -197,6 +225,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets deposited");
                             initialBalance += Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -211,11 +240,10 @@ namespace BankApplication
                                         Console.WriteLine($"The Penalty of rupees 500 charged from your account, Now your balance is {initialBalance - 500}");
                                         initialBalance = initialBalance - 500;
                                     }
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
-                                    DepositAmount();
+                                    AccountType();
                                     break;
                             }
                         }
@@ -240,6 +268,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets withdrawed");
                             initialBalance -= Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -254,13 +283,12 @@ namespace BankApplication
                                         Console.WriteLine($"The Penalty of rupees 500 charged from your account, Now your balance is {initialBalance - 500}");
                                         initialBalance = initialBalance - 500;
                                     }
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("Enter the Money You want to Withdraw");
                                     Amount = Convert.ToDouble(Console.ReadLine());
-                                    WithdrawAmount();
+                                    AccountType();
                                     break;
                             }
 
@@ -297,11 +325,10 @@ namespace BankApplication
                                         Console.WriteLine($"The Penalty of rupees 500 charged from your account, Now your balance is {initialBalance - 500}");
                                         initialBalance = initialBalance - 500;
                                     }
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
-                                    WithdrawAmount();
+                                    AccountType();
                                     break;
                             }
                         }
@@ -319,6 +346,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets Withdrawed");
                             initialBalance -= Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -333,11 +361,10 @@ namespace BankApplication
                                         Console.WriteLine($"The Penalty of rupees 500 charged from your account, Now your balance is {initialBalance - 500}");
                                         initialBalance = initialBalance - 500;
                                     }
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
-                                    WithdrawAmount();
+                                    AccountType();
                                     break;
                             }
                         }
@@ -366,6 +393,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets deposited");
                             initialBalance += Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -375,7 +403,6 @@ namespace BankApplication
                                     System.Environment.Exit(0);
                                     break;
                                 case 1:
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
@@ -413,7 +440,6 @@ namespace BankApplication
                                     System.Environment.Exit(0);
                                     break;
                                 case 1:
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
@@ -435,6 +461,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets deposited");
                             initialBalance += Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -444,7 +471,6 @@ namespace BankApplication
                                     System.Environment.Exit(0);
                                     break;
                                 case 1:
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
@@ -473,6 +499,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets withdrawed");
                             initialBalance -= Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -482,7 +509,6 @@ namespace BankApplication
                                     System.Environment.Exit(0);
                                     break;
                                 case 1:
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
@@ -520,7 +546,6 @@ namespace BankApplication
                                     System.Environment.Exit(0);
                                     break;
                                 case 1:
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
@@ -542,6 +567,7 @@ namespace BankApplication
                             Console.WriteLine("Your Amount gets Withdrawed");
                             initialBalance -= Amount;
                             count += 1;
+                            Console.WriteLine($"The Balance in your Account is {initialBalance}");
                             Console.WriteLine("=============================");
                             Console.WriteLine("Are you want to continue further: 0-exit and 1-banking again");
                             int num = Convert.ToInt32(Console.ReadLine());
@@ -551,8 +577,6 @@ namespace BankApplication
                                     System.Environment.Exit(0);
                                     break;
                                 case 1:
-
-                                    Console.WriteLine($"The Balance in your Account is {initialBalance}");
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
