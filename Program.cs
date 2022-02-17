@@ -286,8 +286,6 @@ namespace BankApplication
                                     Console.WriteLine("                                   ");
                                     Console.WriteLine("===================================");
                                     Console.WriteLine("                                   ");
-                                    Console.WriteLine("Enter the Money You want to Withdraw");
-                                    Amount = Convert.ToDouble(Console.ReadLine());
                                     AccountType();
                                     break;
                             }
