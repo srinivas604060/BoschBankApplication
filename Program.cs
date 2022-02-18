@@ -17,8 +17,7 @@ namespace BankApplication
             public string typeofaccount;
             public void CreateAccount()
             {
-                numbers++;
-                Console.WriteLine(numbers);
+                
                 Console.WriteLine("Enter Owner Name");
                 OwnerName = Console.ReadLine();
                 Console.WriteLine("Enter Owner Location");

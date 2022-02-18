@@ -90,7 +90,7 @@ namespace ApplicationForBank
 
             } catch(Exception e)
             {
-                throw new Exception();
+               throw new Exception();
             }
             Console.ReadKey();
 
