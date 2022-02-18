@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,13 @@ namespace BankApplication
         public class AccountOpening
         {
             public string OwnerName, Place;
-            public int age;
+            public int age,numbers = 0;
             public double phonenumber;
             public string typeofaccount;
             public void CreateAccount()
             {
+                numbers++;
+                Console.WriteLine(numbers);
                 Console.WriteLine("Enter Owner Name");
                 OwnerName = Console.ReadLine();
                 Console.WriteLine("Enter Owner Location");
@@ -768,6 +771,7 @@ Transactions are not allowed now,Please reachout to Bank");
                         salary = 200000
 
                     };
+  
                     employee emp1 = new employee()
                     {
                         age = 21,
@@ -809,6 +813,7 @@ Transactions are not allowed now,Please reachout to Bank");
                     Console.WriteLine("||===================================||");
                     foreach (employee employer in em)
                     {
+                        
                         Console.WriteLine($"|| {employer.age} ||  {employer.name}   ||  {employer.Gender}     || {employer.salary} ||");
                         Console.WriteLine("||===================================||");
                     }
@@ -824,6 +829,7 @@ Transactions are not allowed now,Please reachout to Bank");
                        
                         
                         Program1 b = new Program1();
+                        b.CreateAccount();
                         b.DisplayDetails();
                         b.AccountType();
                         b.BankTransaction();
